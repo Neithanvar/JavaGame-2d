@@ -18,6 +18,7 @@ public class MainFrame
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
+        game.startGame();
 
     }
 }
