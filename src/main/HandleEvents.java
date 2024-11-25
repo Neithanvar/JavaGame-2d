@@ -1,5 +1,5 @@
-import javax.swing.plaf.basic.BasicTreeUI;
-import java.awt.event.KeyEvent;
+package main;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -12,13 +12,12 @@ public class HandleEvents implements MouseListener
     public void mousePressed(MouseEvent e)
     {
         int code = e.getButton();
-        posX = e.getX();
-        posY = e.getY();
+        isLeftPressed = true;
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        isLeftPressed = false;
     }
 
     @Override

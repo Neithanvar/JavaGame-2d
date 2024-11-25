@@ -1,0 +1,28 @@
+Index: src/Game.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class Game extends JPanel implements Runnable\r\n{\r\n    final int originalTileSize = 16;\r\n    final int scale = 3;\r\n\r\n    final int tileSize = originalTileSize * scale;\r\n    final int screenM = 16;\r\n    final int screenN = 7;\r\n    final int screenWidth = screenM * tileSize;\r\n    final int screenHeight = screenN * tileSize;\r\n\r\n    final int FPS = 60;\r\n\r\n    HandleEvents eventsHandler = new HandleEvents();\r\n    Thread gameThread;\r\n\r\n    public Game()\r\n    {\r\n        this.setPreferredSize(new Dimension(screenWidth,screenHeight));\r\n        this.setBackground(Color.black);\r\n        this.setDoubleBuffered(true);\r\n        this.addMouseListener(eventsHandler);\r\n        this.setFocusable(true);\r\n    }\r\n\r\n    public void startGame()\r\n    {\r\n        gameThread = new Thread(this);\r\n        gameThread.start();\r\n    }\r\n\r\n    @Override\r\n    public void run()\r\n    {\r\n\r\n        double drawingInterval = (double) 1000000000 /FPS;\r\n        double deltaTime = 0;\r\n        long currentTime = System.nanoTime();\r\n        long lastTime = currentTime;\r\n        long lastSecond = currentTime;\r\n        int drawCount = 0;\r\n        long timer = 0;\r\n        while(gameThread != null)\r\n        {\r\n            currentTime = System.nanoTime();\r\n\r\n            deltaTime = (currentTime - lastTime) / drawingInterval;\r\n            timer = currentTime - lastSecond;\r\n\r\n\r\n            if(deltaTime >= 1)\r\n            {\r\n                update();\r\n\r\n                repaint();\r\n\r\n                deltaTime--;\r\n                drawCount++;\r\n                lastTime = currentTime;\r\n            }\r\n\r\n            if(timer >= 1000000000)\r\n            {\r\n                System.out.println(drawCount);\r\n                lastSecond = currentTime;\r\n                drawCount = 0;\r\n                timer = 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    public void update()\r\n    {\r\n\r\n    }\r\n\r\n    public void paintComponent(Graphics g)\r\n    {\r\n        super.paintComponent(g);\r\n\r\n        Graphics2D newG = (Graphics2D) g;\r\n\r\n        newG.setColor(Color.MAGENTA);\r\n\r\n        newG.fillRect(100, 100, tileSize,tileSize);\r\n\r\n        newG.dispose();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Game.java b/src/Game.java
+--- a/src/Game.java	(revision 8ac8e7ef25f71f333b46205c25815bb924ada839)
++++ b/src/Game.java	(date 1732508625381)
+@@ -37,12 +37,13 @@
+     {
+ 
+         double drawingInterval = (double) 1000000000 /FPS;
+-        double deltaTime = 0;
+         long currentTime = System.nanoTime();
+         long lastTime = currentTime;
+-        long lastSecond = currentTime;
+-        int drawCount = 0;
+-        long timer = 0;
++//        long lastSecond = currentTime;
++//        int drawCount = 0;
++//        double deltaTime = 0;
++//        long timer = 0;
++        
+         while(gameThread != null)
+         {
+             currentTime = System.nanoTime();

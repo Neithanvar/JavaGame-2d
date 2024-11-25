@@ -1,3 +1,5 @@
+package main;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -6,7 +8,7 @@ public class Game extends JPanel implements Runnable
     final int originalTileSize = 16;
     final int scale = 3;
 
-    final int tileSize = originalTileSize * scale;
+    public final int tileSize = originalTileSize * scale;
     final int screenM = 16;
     final int screenN = 7;
     final int screenWidth = screenM * tileSize;
@@ -37,18 +39,20 @@ public class Game extends JPanel implements Runnable
     {
 
         double drawingInterval = (double) 1000000000 /FPS;
-        double deltaTime = 0;
         long currentTime = System.nanoTime();
         long lastTime = currentTime;
-        long lastSecond = currentTime;
-        int drawCount = 0;
-        long timer = 0;
+        double deltaTime = 0;
+
+//        long lastSecond = currentTime;
+//        int drawCount = 0;
+//        long timer = 0;
+
         while(gameThread != null)
         {
             currentTime = System.nanoTime();
 
             deltaTime = (currentTime - lastTime) / drawingInterval;
-            timer = currentTime - lastSecond;
+//          timer = currentTime - lastSecond;
 
 
             if(deltaTime >= 1)
@@ -57,11 +61,13 @@ public class Game extends JPanel implements Runnable
 
                 repaint();
 
-                deltaTime--;
-                drawCount++;
                 lastTime = currentTime;
+
+                deltaTime--;
+//              drawCount++;
             }
 
+            /*
             if(timer >= 1000000000)
             {
                 System.out.println(drawCount);
@@ -69,12 +75,17 @@ public class Game extends JPanel implements Runnable
                 drawCount = 0;
                 timer = 0;
             }
+            */
         }
     }
 
     public void update()
     {
-
+        if(eventsHandler.isLeftPressed)
+        {
+            eventsHandler.posX += 2;
+            eventsHandler.posY += 2;
+        }
     }
 
     public void paintComponent(Graphics g)
@@ -85,7 +96,7 @@ public class Game extends JPanel implements Runnable
 
         newG.setColor(Color.MAGENTA);
 
-        newG.fillRect(100, 100, tileSize,tileSize);
+        newG.fillRect(eventsHandler.posX, eventsHandler.posY, tileSize,tileSize);
 
         newG.dispose();
     }
