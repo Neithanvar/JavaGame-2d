@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6fb3282-438a-4ad9-b68e-a0ee75f492d9" name="Changes" comment="FPS Tracking Version, testing game engine to check everything is correct">
-      <change afterPath="$PROJECT_DIR$/src/Background/Tile.java" afterDir="false" />
+    <list default="true" id="e6fb3282-438a-4ad9-b68e-a0ee75f492d9" name="Changes" comment="Added Tile class for background">
+      <change afterPath="$PROJECT_DIR$/src/Background/grass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HandleEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HandleEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Background/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Background/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainFrame.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/neith/IdeaProjects/JavaGame - 2d/src&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/neith/IdeaProjects/JavaGame - 2d/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainFrame.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/neith/IdeaProjects/JavaGame - 2d/src/Background",
+    "onboarding.tips.debug.path": "C:/Users/neith/IdeaProjects/JavaGame - 2d/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\neith\IdeaProjects\JavaGame - 2d\src\Background" />
       <recent name="C:\Users\neith\IdeaProjects\JavaGame - 2d\src" />
     </key>
   </component>
@@ -94,14 +93,34 @@
       <option name="project" value="LOCAL" />
       <updated>1732508556896</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Tile class for background">
+      <option name="closed" value="true" />
+      <created>1732746145767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732746145767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added functionality to HandleEvents with MouseListener class from Java" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="FPS Tracking Version, testing game engine to check everything is correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="FPS Tracking Version, testing game engine to check everything is correct" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Added Tile class for background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tile class for background" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
